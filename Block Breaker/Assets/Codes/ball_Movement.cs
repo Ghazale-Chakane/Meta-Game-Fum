@@ -2,8 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ball_Movement : MonoBehaviour
-{
+public class ball_Movement : MonoBehaviour{
+
+    public Rigidbody rb;
+    public bool inplay;
+    public Transform Paddle;
+    public float speed;
+
+    void Start(){
+        rb = GetComponent<Rigidbody> ();
+        
+    }
+
+    void Update(){
+       if(!inplay){
+        transform.position = Paddle.position;
+       }
+       if(Input.GetButtonDown("Jump") && !inplay){
+        inplay = true;
+        rb.AddForce(Vector3.forward * speed);
+        rb.AddForce(Vector3.right * speed);
+        rb.AddForce(Vector3.left * speed);
+
+       }
+
+        }
+         private void OnTriggerEnter(Collider other){
+            rb.velocity = Vector3.zero;
+            inplay = false;
+         }
+/*
    private float ballSpeed = 10f;
    private bool dirx;
    private bool dirz;
@@ -53,3 +81,6 @@ public class ball_Movement : MonoBehaviour
     }
 }
 }
+*/
+}
+
