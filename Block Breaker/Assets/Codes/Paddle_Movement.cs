@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Paddle_Movement : MonoBehaviour
 {
-  private const float Paddle_Speed = 0.05f;
+  private const float Paddle_Speed = 0.5f;
     void Start() {
         
     }
