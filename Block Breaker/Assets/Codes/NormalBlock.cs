@@ -6,7 +6,7 @@ public class NormalBlock : MonoBehaviour
 {
     AudioSource audio;
     
-      private void Start() {
+    void Start() {
         audio = GetComponent<AudioSource>();
     }
 
