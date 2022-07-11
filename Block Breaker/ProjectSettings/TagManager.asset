@@ -9,6 +9,7 @@ TagManager:
   - DownBoarder
   - RightBoarder
   - LeftBoarder
+  - Ball
   layers:
   - Default
   - TransparentFX
