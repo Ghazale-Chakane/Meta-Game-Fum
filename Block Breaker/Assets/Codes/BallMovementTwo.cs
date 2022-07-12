@@ -3,7 +3,7 @@ using UnityEngine;
 public class BallMovementTwo : MonoBehaviour
 {
     public Rigidbody rb;
-    private float speed = 10f;
+    private float speed = 12f;
     void Start()
     {
         rb.AddForce(-250, 0, -500);

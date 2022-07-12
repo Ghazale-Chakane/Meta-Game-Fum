@@ -14,7 +14,7 @@ public class Paddle_Movement : MonoBehaviour
      private void Update() {
         float movez = Input.GetAxis ("Horizontal");
         position.z += movez * Time. deltaTime * Paddle_Speed;
-        position.z = Mathf.Clamp (position.z,-9.0f,+9.0f);
+        position.z = Mathf.Clamp (position.z,-13.5f,+13.5f);
         transform.position = position;
 
     }
